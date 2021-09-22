@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Touched By RedMeowX</title>
+	<style>
+	body {background-color:black;cursor:none;}
+	.tajuk {color:orange;font-family:cursive;text-align:center;font-size:30px;margin:0px;}
+	.tajuk span{color:lime;}
+	</style>
+	<script disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool/disable-devtool.min.js'></script>
+	<script>window.onload = function(){
+    var url = 'https://redmeowx.github.io/lagu.mp3';
+    window.AudioContext = window.AudioContext||window.webkitAudioContext; //fix up prefixing
+    var context = new AudioContext(); //context
+    var source = context.createBufferSource(); //source node
+    source.connect(context.destination); //connect source to speakers so we can hear it
+    var request = new XMLHttpRequest();
+    request.open('GET', url, true); 
+    request.responseType = 'arraybuffer'; //the  response is an array of bits
+    request.onload = function() {
+        context.decodeAudioData(request.response, function(response) {
+            source.buffer = response;
+            source.start(0); //play audio immediately
+            source.loop = true;
+        }, function () { console.error('The request failed.'); } );
+    }
+    request.send();
+}</script>
+<script>
+alert('Warning!');
+alert('Touched By RedMeowX');
+alert('Copyright By KoroSensei');
+alert('Stay Safe Brada');
+</script>
+</head>
+<body oncopy="return false" onpaste="return false" oncut="return false" onmousedown="return false" onmouseup="return false">
+
+	  <h2 class="tajuk">Hacked By 
+	  <span>
+      RedMeowX</h2>
+      </span>
+
+      <!-- Image -->
+      <img src="KoroSensei.jpg" title="Copyright By KoroSensei" alt="RedMeowX" width="320" height="320" style="margin-left:38%;">
+
+      <h2 class="glowup">
+      	<font style="color:pink;text-shadow:0px 0px 3px;font-size:30px;margin-left:43%;">.::Defaced By::.</font>
+      	<br>
+      	<span style="color:#ffffff;text-shadow:#FF0099 0px 0px 10px;margin-left:44.40%;font-size:28px;">./RedMeowX</span>
+      </h2>
+      
+      <b style="color:yellow;font-size:13px;text-align:center;font-family:sans-serif;">
+      	<h2>Sorry <span style="color:red;">Admin</span>, If You See This, <span style="color:blue;">Thats Mean Your Website</span> Has Been <span style="color:red;">Hacked</span>, By <span style="color:blue;">RedMeowX</span>, Please <span style="color:red;">Fix It ASAP</span>, We Will <span style="color:blue;">Come Back</span></h2>
+      </b>
+<br>
+<br>
+<br>
+      <p style="color:green;text-align:center;">~When Your Broke My Heart, I Will Broke My Security.~</p>
+      
+</audio> 
+</body>
+</html>
