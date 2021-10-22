@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang=my dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ZeroMeowX</title>
+    <link rel="stylesheet" type="text/css" href="../CSS/style.css">
+    
+    <!-- Font Awesome Icon Extension -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <!-- End Of Font Awesome Icon Extension -->
+
+    <!-- DevTool Disable -->
+    <script disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool/disable-devtool.min.js'></script>
+    <!-- End Off Devtool Disable -->
+    
+    <!-- Jquery Core -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- End Of Jquery Core -->
+
+    <!-- Sound -->
+    <script>window.onload = function(){
+    var url = 'https://redmeowx.github.io/lagu.mp3';
+    window.AudioContext = window.AudioContext||window.webkitAudioContext; //fix up prefixing
+    var context = new AudioContext(); //context
+    var source = context.createBufferSource(); //source node
+    source.connect(context.destination); //connect source to speakers so we can hear it
+    var request = new XMLHttpRequest();
+    request.open('GET', url, true); 
+    request.responseType = 'arraybuffer'; //the  response is an array of bits
+    request.onload = function() {
+        context.decodeAudioData(request.response, function(response) {
+            source.buffer = response;
+            source.start(0); //play audio immediately
+            source.loop = true;
+        }, function () { console.error('The request failed.'); } );
+    }
+    request.send();
+    }</script>
+    <!-- End Of Sound -->
+  </head>
+  <body onpaste="return false" oncut="return false" oncopy="return false">
+
+        
+
+        <!-- Header -->
+        <div class="social">
+            <div class="container">
+                <ul>
+                  <li><a href="https://facebook.com" title="Tidak Ada"><i class="fab fa-facebook"></i></a></li>
+                  <li><a href="https://www.youtube.com/channel/UCvvFUskjjU3iqDnU2h0uWXA" title="Ada"><i class="fab fa-youtube"></i></a></li>
+                  <li><a href="https://t.me/MeowXSenpai" title="Ada"><i class="fab fa-telegram"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <header>
+          <div class="container">
+            <h1><a href="index.html" style="font-family:cursive;">ZeroMeowX</a></h1>
+              <ul>
+                <li class="active"><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="service.html">SERVICE</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+             </ul>
+          </div>
+        </header>
+
+        <!-- Label -->
+        <section class="label">
+            <div class="container">
+                <p>Home / About</p>
+            </div>
+        </section>
+
+        <!-- About -->
+        <section class="about">
+                <div class="container">
+                    <img src="../IMG/photo_2021-10-22_22-28-47.jpg" title="Copyright By Me" alt="Rahsia" width="360" height="360" class="gambar">
+                    <h3>ABOUT</h3>
+                    <p><strong>Website Ini Dibuat Pada 10/22/2021 Oleh ZeroMeowX Host</strong>,Tahniah Kepada Sesiapa Yang Dibenarkan Masuk Ke Website Ini!,Anda Adalah Salah Seorang Yang Sangat Bertuah!,Mohon Memeberi Feedback Tentang Website Kami Samada Feedback Ialah Bug,Ataupun Sebuah Kritikan!,Kami Akan Memperbaikinya Secepat Mungkin.</p>
+                    <br>
+                    <p><strong>Jika Anda Mencuba Masuk Website Tetapi Gagal</strong>,Mungkin <strong >Ada Gangguan Pada Server</strong>,Mohon Bersabar!</p>
+                </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <small>Copyright &copy; 2021 - ZeroMeowX. All Rights Reserved.</small>
+            </div>
+        </footer>
+
+        <!-- Loader -->
+        <div class="bg-loader">
+            <div class="loader"></div>
+        </div>
+
+        <script type="text/javascript">
+            $(document).ready(function(){
+                       $(".bg-loader").hide();
+            })
+        </script>
+
+  </body>
+</html>
